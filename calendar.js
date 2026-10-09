@@ -42,7 +42,7 @@ function buildFrSentence(date){
 }
 function buildEnSentence(date){
     var cycleName = cycleFullFor(date.getFullYear(), date.getMonth(), date.getDate()).toLowerCase();
-    return WEEKDAY_EN[date.getDay()] + " " + cycleName + ", " + date.getDate() + " " + MONTH_EN[date.getMonth()] + " " + date.getFullYear();
+    return WEEKDAY_EN[date.getDay()] + " " + cycleName.charAt(0).toUpperCase() + cycleName.slice(1) + ", " + date.getDate() + " " + MONTH_EN[date.getMonth()] + " " + date.getFullYear();
 }
 
 function yearAnchorDiffDays(date){
