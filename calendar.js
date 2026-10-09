@@ -37,10 +37,12 @@ function buildLocalSentence(date){
     return weekdayName + " " + cycleName + ", ley'ey " + date.getDate() + ", le " + MONTH_FULL[date.getMonth()].toLowerCase() + ", le ngeu' " + date.getFullYear();
 }
 function buildFrSentence(date){
-    return WEEKDAY_FR[date.getDay()] + ", " + date.getDate() + " " + MONTH_FR[date.getMonth()].toLowerCase() + " " + date.getFullYear();
+    var cycleName = cycleFullFor(date.getFullYear(), date.getMonth(), date.getDate()).toLowerCase();
+    return WEEKDAY_FR[date.getDay()] + " " + cycleName + ", " + date.getDate() + " " + MONTH_FR[date.getMonth()].toLowerCase() + " " + date.getFullYear();
 }
 function buildEnSentence(date){
-    return WEEKDAY_EN[date.getDay()] + ", " + date.getDate() + " " + MONTH_EN[date.getMonth()] + " " + date.getFullYear();
+    var cycleName = cycleFullFor(date.getFullYear(), date.getMonth(), date.getDate()).toLowerCase();
+    return WEEKDAY_EN[date.getDay()] + " " + cycleName + ", " + date.getDate() + " " + MONTH_EN[date.getMonth()] + " " + date.getFullYear();
 }
 
 function yearAnchorDiffDays(date){
