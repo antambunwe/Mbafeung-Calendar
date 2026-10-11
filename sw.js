@@ -3,7 +3,7 @@
    connections, and so browsers that require a service worker for installability
    see one. Bump CACHE_NAME whenever a shipped file changes so clients pick up
    the new version instead of a stale cached copy. */
-var CACHE_NAME = "mbafeung-shell-v2";
+var CACHE_NAME = "mbafeung-shell-v3";
 var APP_SHELL = [
     "./",
     "./index.html",
